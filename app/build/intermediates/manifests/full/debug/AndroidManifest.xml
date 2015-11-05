@@ -14,7 +14,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Holo.Light" >
+        android:theme="@android:style/Theme.Material" >
         <activity
             android:name="fr.yrion.yrion.MainActivity"
             android:label="@string/app_name" >
@@ -30,12 +30,15 @@
         </activity>
         <activity
             android:name="fr.yrion.yrion.view_parcelle"
-            android:label="@string/title_activity_view_parcelle"
+            android:label="Parcelle"
             android:parentActivityName="fr.yrion.yrion.Accueil" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.yrion.yrion.Accueil" />
         </activity>
+        <activity
+            android:name="android.support.v7.widget.TestActivity"
+            android:label="RecyclerViewTestActivity" />
     </application>
 
 </manifest>
