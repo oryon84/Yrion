@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Yrion</string>
+    <color name="teal_darken_1">#00897b</color>
+    <color name="teal_lighten_4">#b2dfdb</color>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_accueil">Accueil</string>
+    <string name="title_activity_view_parcelle">view_parcelle</string>
+</resources>
