@@ -135,10 +135,12 @@ containing a value of this type.
         public static final int cardview_default_radius=0x7f060004;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0008;
+        public static final int action_settings=0x7f0a000a;
         public static final int connexion=0x7f0a0005;
         public static final int editText=0x7f0a0003;
         public static final int gridlayout1=0x7f0a0001;
+        public static final int mDate=0x7f0a0009;
+        public static final int mNom=0x7f0a0008;
         public static final int password=0x7f0a0004;
         public static final int rv=0x7f0a0007;
         public static final int titre=0x7f0a0006;
@@ -149,6 +151,7 @@ containing a value of this type.
         public static final int activity_accueil=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_view_parcelle=0x7f030002;
+        public static final int row=0x7f030003;
     }
     public static final class menu {
         public static final int menu_accueil=0x7f090000;
