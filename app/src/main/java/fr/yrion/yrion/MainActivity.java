@@ -37,10 +37,10 @@ public class MainActivity extends Activity {
         password = (EditText)findViewById(R.id.password);
         connexion = (Button)findViewById(R.id.connexion);
         yrion = (TextView)findViewById(R.id.yrion);
-        Typeface MyCustomFont = Typeface.createFromAsset(getAssets(),"fonts/police.ttf");
+
         animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
         animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_out);
-        yrion.setTypeface(MyCustomFont);
+
         yrion.startAnimation(animFadeIn);
         connexion.setOnClickListener(new View.OnClickListener() {
             @Override

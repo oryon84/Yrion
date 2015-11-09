@@ -9,7 +9,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -20,6 +22,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implem
 
     private ArrayList<String> mDataset;
     private static Context sContext;
+    private Calendar c;
 
     // Adapter's Constructor
     public RVAdapter(Context context, ArrayList<String> myDataset) {
@@ -49,7 +52,9 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implem
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        holder.mDate.setText("19-06-2015");
+        c = Calendar.getInstance();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        holder.mDate.setText(df.format(c.getTime()));
         // Get element from your dataset at this position and set the text for the specified element
         holder.mNom.setText(mDataset.get(position));
 
@@ -87,6 +92,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.ViewHolder> implem
         }
         return false;
     }
+
 
     // Create the ViewHolder class to keep references to your views
     public static class ViewHolder extends RecyclerView.ViewHolder {

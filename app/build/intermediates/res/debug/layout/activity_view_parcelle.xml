@@ -17,20 +17,23 @@
             android:id="@+id/topPanel"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:background="@color/gray"
             android:layout_weight="0.6">
 
                 <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="test"
                 android:layout_gravity="center"
+                android:textSize="40dp"
                 android:id="@+id/titre"/>
 
         </LinearLayout>
 
         <LinearLayout
+            android:paddingTop="50dp"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:background="@color/graylight"
             android:layout_weight="0.4">
 
             <android.support.v7.widget.RecyclerView
@@ -60,4 +63,4 @@
         />
 
 </android.support.design.widget.CoordinatorLayout>
-<!-- From: file:/C:/Users/oisn/StudioProjects/Yrion/app/src/main/res/layout/activity_view_parcelle.xml -->
+<!-- From: file:/Users/orion/AndroidStudioProjects/Yrion/app/src/main/res/layout/activity_view_parcelle.xml -->

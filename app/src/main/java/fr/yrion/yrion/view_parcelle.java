@@ -32,7 +32,7 @@ public class view_parcelle extends Activity {
         setContentView(R.layout.activity_view_parcelle);
         titre = (TextView)findViewById(R.id.titre);
         boutonadd = (FloatingActionButton)findViewById(R.id.boutonadd);
-        boutonadd.setBackgroundTintList(getResources().getColorStateList(android.R.color.holo_red_light));
+        boutonadd.setBackgroundTintList(getResources().getColorStateList(R.color.teal_darken_1));
         rv = (RecyclerView)findViewById(R.id.rv);
         llm = new LinearLayoutManager(getApplicationContext());
         rv.setLayoutManager(llm);
@@ -43,10 +43,8 @@ public class view_parcelle extends Activity {
         boutonadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDataSet.add("toto");
-                RecyclerView.Adapter adapter = new RVAdapter(view_parcelle.this,mDataSet);
-                adapter.notifyDataSetChanged();
-                rv.setAdapter(adapter);
+
+
             }
         });
         for(int i=0;i<10;i++){
