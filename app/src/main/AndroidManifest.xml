@@ -3,14 +3,13 @@
     package="fr.yrion.yrion" >
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-
-        android:theme="@style/AppTheme"  >
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -27,11 +26,14 @@
         <activity
             android:name=".view_parcelle"
             android:label="Parcelle"
-
             android:parentActivityName=".Accueil" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.yrion.yrion.Accueil" />
+        </activity>
+        <activity
+            android:name=".view_cuvee"
+            android:label="@string/title_activity_view_cuvee" >
         </activity>
     </application>
 

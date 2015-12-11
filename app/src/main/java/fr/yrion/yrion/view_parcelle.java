@@ -18,13 +18,16 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.yrion.yrion.network.UpdatePa;
+
 
 public class view_parcelle extends Activity {
     TextView titre;
-    RecyclerView rv;
+    public static RecyclerView rv;
     FloatingActionButton boutonadd;
     LinearLayoutManager llm;
-    RecyclerView.Adapter adapter;
+    String name;
+    public static RecyclerView.Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,21 +40,19 @@ public class view_parcelle extends Activity {
         llm = new LinearLayoutManager(getApplicationContext());
         rv.setLayoutManager(llm);
         Intent intent = getIntent();
-        String name = intent.getStringExtra("parcelle");
+        name = intent.getStringExtra("extra");
         titre.setText(name);
-        final ArrayList<String> mDataSet = new ArrayList<>();
+
+
         boutonadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
+                new UpdatePa(view_parcelle.this,name).execute();
             }
         });
-        for(int i=0;i<10;i++){
-            mDataSet.add("Bonjour"+i);
-        }
-        RecyclerView.Adapter adapter = new RVAdapter(view_parcelle.this,mDataSet);
-        rv.setAdapter(adapter);
+
+
+
 
     }
 

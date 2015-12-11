@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridLayout;
 import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ import java.util.ArrayList;
 
 public class Accueil extends Activity {
     TextView yrion;
-    GridView grid;
+    ListView listview;
 
 
     @Override
@@ -29,21 +30,29 @@ public class Accueil extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
         yrion = (TextView)findViewById(R.id.yrion1);
-        grid = (GridView)findViewById(R.id.gridlayout1);
+        listview = (ListView)findViewById(R.id.listView);
         Typeface MyCustomFont = Typeface.createFromAsset(getAssets(),"fonts/police.ttf");
         yrion.setTypeface(MyCustomFont);
         final String[] parcelle = new String[]{
-                "Grande J","Petit J","syrah","toto","roro","titi"
+                "Parcelles","Cuvées"
         };
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,parcelle);
-        grid.setAdapter(adapter);
-        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listview.setAdapter(adapter);
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent i1 = new Intent(getApplicationContext(),view_parcelle.class);
+                switch(i){
+                    case 0:
+                        Intent i1 = new Intent(getApplicationContext(),view_parcelle.class);
+                        i1.putExtra("extra", ((TextView) view).getText());
+                        startActivity(i1);
+                        break;
+                    case 1:
+                        Intent i2 = new Intent(getApplicationContext(),view_cuvee.class);
+                        i2.putExtra("extra",((TextView) view).getText());
+                        startActivity(i2);
+                }
 
-                i1.putExtra("parcelle",((TextView) view).getText());
-                startActivity(i1);
             }
         });
 

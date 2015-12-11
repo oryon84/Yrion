@@ -9,27 +9,19 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="100dp"
+        android:textColor="#388E3C"
+        android:textSize="90dp"
         android:gravity="center"
-
         android:id="@+id/yrion1"
-        android:text="Yrion"/>
+        android:text="Solence"/>
 
-    <GridView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_centerHorizontal="true"
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
         android:layout_below="@+id/yrion1"
-        android:numColumns="2"
-        android:id="@+id/gridlayout1"
-        android:layout_gravity="center"
-        android:focusableInTouchMode="false">
-
-
-
-
-        </GridView>
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
-<!-- From: file:/Users/orion/AndroidStudioProjects/Yrion/app/src/main/res/layout/activity_accueil.xml -->
+<!-- From: file:/C:/Users/oisn/StudioProjects/Yrion/app/src/main/res/layout/activity_accueil.xml -->
